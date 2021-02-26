@@ -7,7 +7,7 @@ void main() {
     test('Polish address to display in English', () {
       const address = Address(
         fullName: 'Grzegorz Brzęczyszczykiewicz',
-        address1: 'al. Jerozolimskie 13A/2',
+        addressLine1: 'al. Jerozolimskie 13A/2',
         city: 'Warszawa',
         postalCode: '00-111',
         country: 'PL',
@@ -26,7 +26,7 @@ void main() {
     group('Canadian address', () {
       const address = Address(
         fullName: 'Nicole Martin',
-        address1: '123 Sherbrooke St',
+        addressLine1: '123 Sherbrooke St',
         city: 'Montreal',
         zone: 'QC',
         postalCode: 'H3G 2A6',
@@ -59,7 +59,7 @@ void main() {
     test('Spanish address to display in English', () {
       const address = Address(
         fullName: 'Sr. Francisco Ansó García',
-        address1: 'Paseo de la Castellana, 185, 5ºB',
+        addressLine1: 'Paseo de la Castellana, 185, 5ºB',
         city: 'Madrid',
         postalCode: '29001',
         zone: 'M',

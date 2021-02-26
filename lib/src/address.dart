@@ -5,8 +5,8 @@ class Address {
     this.city,
     this.postalCode,
     this.zone,
-    this.address1,
-    this.address2,
+    this.addressLine1,
+    this.addressLine2,
     this.phone,
   });
 
@@ -26,10 +26,10 @@ class Address {
   final String? zone;
 
   /// First line of the address, usually street name with other data.
-  final String? address1;
+  final String? addressLine1;
 
   /// Second line of the address.
-  final String? address2;
+  final String? addressLine2;
 
   /// Phone number.
   final String? phone;

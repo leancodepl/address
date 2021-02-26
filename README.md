@@ -1,14 +1,72 @@
 # address
 
-A new Flutter package project.
+[![GitHub test workflow status][build-badge]][build-link]
 
-## Getting Started
+Addresses internationalization library.
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+## Usage
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+### Formatting address to display
+
+Given you have some address:
+
+```dart
+final address = Address(
+  fullName: 'Nicole Martin',
+  addressLine1: '123 Sherbrooke St',
+  city: 'Montreal',
+  zone: 'QC',
+  postalCode: 'H3G 2A6',
+  country: 'CA',
+);
+```
+
+You can format it to your desired format:
+
+```dart
+final englishFormatter = AddressFormatter('en');
+print(englishFormatter.formatDisplay(address));
+
+// [
+//   'NICOLE MARTIN',
+//   '123 SHERBROOKE ST',
+//   'MONTREAL QC  H3G 2A6'
+// ]
+
+final frenchFormatter = AddressFormatter('fr');
+print(frenchFormatter.formatDisplay(address));
+
+// [
+//   'Nicole Martin',
+//   '123 Sherbrooke St',
+//   'Montreal (Québec)  H2G 2A6'
+// ]
+```
+
+## Address form layout
+
+You can also get localized format of an address form with all obligatory and optional fields along with their labels and descriptions.
+
+```dart
+final addressFormatter = AddressFormatter('en');
+final formFormat = addressFormatter.formatForm('US');
+
+// formFormat = [
+//   // other fields: full name, addressLine1, addressLine2, city
+//   AddressFormFieldInformation(
+//     label: 'State',
+//     obligatory: true,
+//     availableValues: {
+//       // (...)
+//       'TX': 'Texas',
+//       // (...)
+//     },
+//   ),
+//   // other fields: zip code
+// ]
+```
+
+You can use this information to build e.g. a Flutter form.
+
+[build-link]: https://github.com/leancodepl/address/actions/workflows/test.yml
+[build-badge]: https://img.shields.io/github/workflow/status/leancodepl/address/Test

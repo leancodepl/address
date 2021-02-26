@@ -99,13 +99,13 @@ class AddressFormatter {
       case DisplayAddressPart.fullZone:
         return _fullZoneName(address);
       case DisplayAddressPart.address1:
-        return address.address1;
+        return address.addressLine1;
       case DisplayAddressPart.address1Uppercase:
-        return address.address1?.toUpperCase();
+        return address.addressLine1?.toUpperCase();
       case DisplayAddressPart.address2:
-        return address.address2;
+        return address.addressLine2;
       case DisplayAddressPart.address2Uppercase:
-        return address.address2?.toUpperCase();
+        return address.addressLine2?.toUpperCase();
       default:
         return null;
     }
