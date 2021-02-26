@@ -51,4 +51,10 @@ class AuAddressFormat extends AddressFormat {
         AddressFormField.zone: {'en': 'State/Territory'},
         AddressFormField.postalCode: postcodeLabel,
       };
+
+  @override
+  Map<AddressFormField, Map<String, String>> get fieldDescriptions => {
+        AddressFormField.address1: streetAddressPoBoxCompanyNameDescription,
+        AddressFormField.address2: apartmentSuiteEtcDescription,
+      };
 }

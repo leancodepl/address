@@ -93,4 +93,10 @@ class UsAddressFormat extends AddressFormat {
         AddressFormField.postalCode: zipCodeLabel,
         AddressFormField.zone: stateLabel,
       };
+
+  @override
+  Map<AddressFormField, Map<String, String>> get fieldDescriptions => {
+        AddressFormField.address1: streetAddressPoBoxCompanyNameDescription,
+        AddressFormField.address2: apartmentSuiteEtcDescription,
+      };
 }

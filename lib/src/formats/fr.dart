@@ -1,4 +1,5 @@
 import '../address_format.dart';
+import '../common_labels.dart';
 import '../display.dart';
 import '../form.dart';
 
@@ -28,4 +29,10 @@ class FrAddressFormat extends AddressFormat {
         [AddressFormField.city],
         [AddressFormField.postalCode],
       ];
+
+  @override
+  Map<AddressFormField, Map<String, String>> get fieldDescriptions => {
+        AddressFormField.address1: streetAddressPoBoxCompanyNameDescription,
+        AddressFormField.address2: apartmentSuiteEtcDescription,
+      };
 }

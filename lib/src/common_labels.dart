@@ -8,9 +8,17 @@ const address1Label = {
   'en': 'Address line 1',
 };
 
+const streetAddressPoBoxCompanyNameDescription = {
+  'en': 'Street address, P.O. box, company name, c/o',
+};
+
 // Address 2
 const address2Label = {
   'en': 'Address line 2',
+};
+
+const apartmentSuiteEtcDescription = {
+  'en': 'Apartment, suite, unit, building, floor, etc.',
 };
 
 // City

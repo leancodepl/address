@@ -148,4 +148,10 @@ class ItAddressFormat extends AddressFormat {
   Map<AddressFormField, Map<String, String>> get customFieldLabels => {
         AddressFormField.zone: provinceLabel,
       };
+
+  @override
+  Map<AddressFormField, Map<String, String>> get fieldDescriptions => {
+        AddressFormField.address1: streetAddressPoBoxCompanyNameDescription,
+        AddressFormField.address2: apartmentSuiteEtcDescription,
+      };
 }

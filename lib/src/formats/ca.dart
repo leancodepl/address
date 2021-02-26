@@ -106,4 +106,10 @@ class CaAddressFormat extends AddressFormat {
         AddressFormField.postalCode: postalCodeLabel,
         AddressFormField.zone: provinceLabel,
       };
+
+  @override
+  Map<AddressFormField, Map<String, String>> get fieldDescriptions => {
+        AddressFormField.address1: streetAddressPoBoxCompanyNameDescription,
+        AddressFormField.address2: apartmentSuiteEtcDescription,
+      };
 }
