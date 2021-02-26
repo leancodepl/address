@@ -104,8 +104,8 @@ class CaAddressFormat extends AddressFormat {
       };
 
   @override
-  Map<FormAddressPart, Map<String, String>> get customFieldLabels => {
-        FormAddressPart.postalCode: postalCodeLabel,
-        FormAddressPart.zone: provinceLabel,
+  Map<AddressFormField, Map<String, String>> get customFieldLabels => {
+        AddressFormField.postalCode: postalCodeLabel,
+        AddressFormField.zone: provinceLabel,
       };
 }

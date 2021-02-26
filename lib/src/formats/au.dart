@@ -42,9 +42,9 @@ class AuAddressFormat extends AddressFormat {
       };
 
   @override
-  Map<FormAddressPart, Map<String, String>> get customFieldLabels => {
-        FormAddressPart.city: {'en': 'Locality'},
-        FormAddressPart.zone: stateLabel,
-        FormAddressPart.postalCode: postcodeLabel,
+  Map<AddressFormField, Map<String, String>> get customFieldLabels => {
+        AddressFormField.city: {'en': 'Locality'},
+        AddressFormField.zone: stateLabel,
+        AddressFormField.postalCode: postcodeLabel,
       };
 }

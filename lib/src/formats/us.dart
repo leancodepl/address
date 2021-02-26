@@ -88,8 +88,8 @@ class UsAddressFormat extends AddressFormat {
       };
 
   @override
-  Map<FormAddressPart, Map<String, String>> get customFieldLabels => {
-        FormAddressPart.postalCode: zipCodeLabel,
-        FormAddressPart.zone: stateLabel,
+  Map<AddressFormField, Map<String, String>> get customFieldLabels => {
+        AddressFormField.postalCode: zipCodeLabel,
+        AddressFormField.zone: stateLabel,
       };
 }

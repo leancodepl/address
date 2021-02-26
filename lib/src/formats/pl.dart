@@ -27,10 +27,10 @@ class PlAddressFormat extends AddressFormat {
       };
 
   @override
-  List<List<AddressPartField>> get formFormat => [
-        [FormAddressPart.fullName.field()],
-        [FormAddressPart.company.field()],
-        [FormAddressPart.address1.field()],
-        [FormAddressPart.postalCode.field(), FormAddressPart.city.field(2)],
+  List<List<AddressFormField>> get formFormat => [
+        [AddressFormField.fullName],
+        [AddressFormField.company],
+        [AddressFormField.address1],
+        [AddressFormField.postalCode, AddressFormField.city],
       ];
 }
