@@ -14,9 +14,24 @@ abstract class AddressFormat {
   /// First language in the map is used as a fallback.
   Map<String, List<List<DisplayAddressPiece>>> get displayFormat;
 
-  /// 2D list of address parts describing how the form for a given country's
+  /// List of address parts describing how the form for a given country's
   /// address should be layed out.
-  List<List<AddressFormField>> get formFormat;
+  List<AddressFormField> get formFormat;
+
+  @protected
+  bool get isPostalCodeObligatory => true;
+
+  @protected
+  bool get isZoneObligatory => false;
+
+  /// Form fields that are obligatory in form.
+  List<AddressFormField> get obligatoryFormFields => [
+        AddressFormField.fullName,
+        AddressFormField.address1,
+        AddressFormField.city,
+        if (isZoneObligatory) AddressFormField.zone,
+        if (isPostalCodeObligatory) AddressFormField.postalCode,
+      ];
 
   /// If country uses zones (province, state, etc.) this is a dictionary of its
   /// ISO 3166-2 code to the dictionary of language => full name.
@@ -25,7 +40,7 @@ abstract class AddressFormat {
   Map<String, Map<String, String>> get zoneNames => {};
 
   static const _defaultFieldLabels = {
-    AddressFormField.fullName: fullNameLabel,
+    AddressFormField.fullName: fullNameAndOrCompanyLabel,
     AddressFormField.address1: address1Label,
     AddressFormField.address2: address2Label,
     AddressFormField.city: cityLabel,

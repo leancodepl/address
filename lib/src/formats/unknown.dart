@@ -3,9 +3,9 @@ import '../common_labels.dart';
 import '../display.dart';
 import '../form.dart';
 
-class AuAddressFormat extends AddressFormat {
+class UnknownAddressFormat extends AddressFormat {
   @override
-  String get country => 'AU';
+  String get country => 'XX';
 
   @override
   Map<String, List<List<DisplayAddressPiece>>> get displayFormat => {
@@ -14,12 +14,11 @@ class AuAddressFormat extends AddressFormat {
           [DisplayAddressPiece(part: DisplayAddressPart.address1)],
           [DisplayAddressPiece(part: DisplayAddressPart.address2)],
           [
-            DisplayAddressPiece(part: DisplayAddressPart.cityUppercase),
-            DisplayAddressPiece(text: ' '),
-            DisplayAddressPiece(part: DisplayAddressPart.zone),
+            DisplayAddressPiece(part: DisplayAddressPart.city),
             DisplayAddressPiece(text: ' '),
             DisplayAddressPiece(part: DisplayAddressPart.postalCode),
           ],
+          [DisplayAddressPiece(part: DisplayAddressPart.zone)],
         ],
       };
 
@@ -28,31 +27,15 @@ class AuAddressFormat extends AddressFormat {
         AddressFormField.fullName,
         AddressFormField.address1,
         AddressFormField.address2,
-        AddressFormField.postalCode,
         AddressFormField.city,
+        AddressFormField.postalCode,
         AddressFormField.zone,
       ];
 
   @override
-  bool get isZoneObligatory => true;
-
-  @override
-  Map<String, Map<String, String>> get zoneNames => {
-        'NSW': {'en': 'New South Wales'},
-        'QLD': {'en': 'Queensland'},
-        'SA': {'en': 'South Australia'},
-        'TAS': {'en': 'Tasmania'},
-        'VIC': {'en': 'Victoria'},
-        'WA': {'en': 'Western Australia'},
-        'ACT': {'en': 'Australian Capital Territory'},
-        'NT': {'en': 'Northern Territory'},
-      };
-
-  @override
   Map<AddressFormField, Map<String, String>> get customFieldLabels => {
-        AddressFormField.city: {'en': 'Suburb'},
-        AddressFormField.zone: {'en': 'State/Territory'},
-        AddressFormField.postalCode: postcodeLabel,
+        AddressFormField.postalCode: postalCodeLabel,
+        AddressFormField.zone: regionLabel,
       };
 
   @override

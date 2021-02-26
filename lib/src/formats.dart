@@ -4,14 +4,16 @@ import 'formats/es.dart';
 import 'formats/fr.dart';
 import 'formats/it.dart';
 import 'formats/pl.dart';
+import 'formats/unknown.dart';
 import 'formats/us.dart';
 
 final addressFormats = {
-  'au': AuAddressFormat(),
-  'ca': CaAddressFormat(),
-  'es': EsAddressFormat(),
-  'fr': FrAddressFormat(),
-  'it': ItAddressFormat(),
-  'pl': PlAddressFormat(),
-  'us': UsAddressFormat(),
+  'AU': AuAddressFormat(),
+  'CA': CaAddressFormat(),
+  'ES': EsAddressFormat(),
+  'FR': FrAddressFormat(),
+  'IT': ItAddressFormat(),
+  'PL': PlAddressFormat(),
+  'US': UsAddressFormat(),
+  'XX': UnknownAddressFormat(),
 };

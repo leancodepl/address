@@ -4,7 +4,7 @@ import '../form.dart';
 
 class PlAddressFormat extends AddressFormat {
   @override
-  String get country => 'pl';
+  String get country => 'PL';
 
   @override
   Map<String, List<List<DisplayAddressPiece>>> get displayFormat => {
@@ -21,11 +21,11 @@ class PlAddressFormat extends AddressFormat {
       };
 
   @override
-  List<List<AddressFormField>> get formFormat => [
-        [AddressFormField.fullName],
-        [AddressFormField.address1],
-        [AddressFormField.address2],
-        [AddressFormField.postalCode],
-        [AddressFormField.city],
+  List<AddressFormField> get formFormat => [
+        AddressFormField.fullName,
+        AddressFormField.address1,
+        AddressFormField.address2,
+        AddressFormField.postalCode,
+        AddressFormField.city,
       ];
 }

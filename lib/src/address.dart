@@ -1,5 +1,6 @@
 class Address {
   const Address({
+    required this.country,
     this.fullName,
     this.city,
     this.postalCode,
@@ -7,10 +8,12 @@ class Address {
     this.address1,
     this.address2,
     this.phone,
-    required this.country,
   });
 
-  /// Full personal name.
+  /// Country. ISO 3166-1 alpha-2.
+  final String country;
+
+  /// Full personal name and/or company name.
   final String? fullName;
 
   /// City, town, village, etc.
@@ -30,7 +33,4 @@ class Address {
 
   /// Phone number.
   final String? phone;
-
-  /// Country. ISO 3166-1 alpha-2.
-  final String country;
 }

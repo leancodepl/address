@@ -5,7 +5,7 @@ import '../form.dart';
 
 class ItAddressFormat extends AddressFormat {
   @override
-  String get country => 'it';
+  String get country => 'IT';
 
   @override
   Map<String, List<List<DisplayAddressPiece>>> get displayFormat => {
@@ -24,14 +24,17 @@ class ItAddressFormat extends AddressFormat {
       };
 
   @override
-  List<List<AddressFormField>> get formFormat => [
-        [AddressFormField.fullName],
-        [AddressFormField.address1],
-        [AddressFormField.address2],
-        [AddressFormField.city],
-        [AddressFormField.zone],
-        [AddressFormField.postalCode],
+  List<AddressFormField> get formFormat => [
+        AddressFormField.fullName,
+        AddressFormField.address1,
+        AddressFormField.address2,
+        AddressFormField.city,
+        AddressFormField.zone,
+        AddressFormField.postalCode,
       ];
+
+  @override
+  bool get isZoneObligatory => true;
 
   @override
   Map<String, Map<String, String>> get zoneNames => {
@@ -151,7 +154,7 @@ class ItAddressFormat extends AddressFormat {
 
   @override
   Map<AddressFormField, Map<String, String>> get fieldDescriptions => {
-        AddressFormField.address1: streetAddressPoBoxCompanyNameDescription,
+        AddressFormField.address1: streetAddressPoBoxCoDescription,
         AddressFormField.address2: apartmentSuiteEtcDescription,
       };
 }
