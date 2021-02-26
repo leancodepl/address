@@ -4,8 +4,7 @@ import 'package:test/test.dart';
 void main() {
   test('formats Polish address to display in English', () {
     const address = Address(
-      firstName: 'Grzegorz',
-      lastName: 'Brzęczyszczykiewicz',
+      fullName: 'Grzegorz Brzęczyszczykiewicz',
       address1: 'al. Jerozolimskie 13A/2',
       city: 'Warszawa',
       postalCode: '00-111',
@@ -15,18 +14,16 @@ void main() {
     final addressFormatter = AddressFormatter();
     final displayFormatted = addressFormatter.formatDisplay(address);
 
-    expect(
-      displayFormatted,
-      'Grzegorz Brzęczyszczykiewicz\n'
-      'al. Jerozolimskie 13A/2\n'
+    expect(displayFormatted, [
+      'Grzegorz Brzęczyszczykiewicz',
+      'al. Jerozolimskie 13A/2',
       '00-111 Warszawa',
-    );
+    ]);
   });
 
   group('formats Canadian address', () {
     const address = Address(
-      firstName: 'Nicole',
-      lastName: 'Martin',
+      fullName: 'Nicole Martin',
       address1: '123 Sherbrooke St',
       city: 'Montreal',
       zone: 'QC',
@@ -38,24 +35,43 @@ void main() {
       final addressFormatter = AddressFormatter('en');
       final displayFormatted = addressFormatter.formatDisplay(address);
 
-      expect(
-        displayFormatted,
-        'Nicole Martin\n'
-        '123 Sherbrooke St\n'
-        'Montreal QC  H3G 2A6',
-      );
+      expect(displayFormatted, [
+        'NICOLE MARTIN',
+        '123 SHERBROOKE ST',
+        'MONTREAL QC  H3G 2A6',
+      ]);
     });
 
     test('to display in French', () {
       final addressFormatter = AddressFormatter('fr');
       final displayFormatted = addressFormatter.formatDisplay(address);
 
-      expect(
-        displayFormatted,
-        'Nicole Martin\n'
-        '123 Sherbrooke St\n'
+      expect(displayFormatted, [
+        'Nicole Martin',
+        '123 Sherbrooke St',
         'Montreal (Québec)  H3G 2A6',
-      );
+      ]);
     });
+  });
+
+  test('formats Spanish address to display in English', () {
+    const address = Address(
+      fullName: 'Sr. Francisco Ansó García',
+      address1: 'Paseo de la Castellana, 185, 5ºB',
+      city: 'Madrid',
+      postalCode: '29001',
+      zone: 'M',
+      country: 'es',
+    );
+
+    final addressFormatter = AddressFormatter();
+    final displayFormatted = addressFormatter.formatDisplay(address);
+
+    expect(displayFormatted, [
+      'Sr. Francisco Ansó García',
+      'Paseo de la Castellana, 185, 5ºB',
+      '29001 Madrid',
+      'Madrid',
+    ]);
   });
 }

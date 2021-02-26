@@ -1,7 +1,6 @@
 class Address {
   const Address({
-    this.firstName,
-    this.lastName,
+    this.fullName,
     this.company,
     this.city,
     this.postalCode,
@@ -12,11 +11,8 @@ class Address {
     required this.country,
   });
 
-  /// First name, given name.
-  final String? firstName;
-
-  /// Last name, family name, surname.
-  final String? lastName;
+  /// Full personal name.
+  final String? fullName;
 
   /// Company name.
   final String? company;
