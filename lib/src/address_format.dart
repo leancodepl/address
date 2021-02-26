@@ -27,7 +27,6 @@ abstract class AddressFormat {
   static const Map<AddressFormField, Map<String, String>> _defaultFieldLabels =
       {
     AddressFormField.fullName: fullNameLabel,
-    AddressFormField.company: companyLabel,
     AddressFormField.address1: address1Label,
     AddressFormField.address2: address2Label,
     AddressFormField.city: cityLabel,

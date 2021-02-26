@@ -10,15 +10,9 @@ class CaAddressFormat extends AddressFormat {
   @override
   Map<String, List<List<DisplayAddressPiece>>> get displayFormat => {
         'en': [
-          [
-            DisplayAddressPiece(part: DisplayAddressPart.fullNameUppercase),
-          ],
-          [
-            DisplayAddressPiece(part: DisplayAddressPart.companyUppercase),
-          ],
-          [
-            DisplayAddressPiece(part: DisplayAddressPart.address1Uppercase),
-          ],
+          [DisplayAddressPiece(part: DisplayAddressPart.fullNameUppercase)],
+          [DisplayAddressPiece(part: DisplayAddressPart.address1Uppercase)],
+          [DisplayAddressPiece(part: DisplayAddressPart.address2Uppercase)],
           [
             DisplayAddressPiece(part: DisplayAddressPart.cityUppercase),
             DisplayAddressPiece(text: ' '),
@@ -28,15 +22,9 @@ class CaAddressFormat extends AddressFormat {
           ],
         ],
         'fr': [
-          [
-            DisplayAddressPiece(part: DisplayAddressPart.fullName),
-          ],
-          [
-            DisplayAddressPiece(part: DisplayAddressPart.company),
-          ],
-          [
-            DisplayAddressPiece(part: DisplayAddressPart.address1),
-          ],
+          [DisplayAddressPiece(part: DisplayAddressPart.fullName)],
+          [DisplayAddressPiece(part: DisplayAddressPart.address1)],
+          [DisplayAddressPiece(part: DisplayAddressPart.address2)],
           [
             DisplayAddressPiece(part: DisplayAddressPart.city),
             DisplayAddressPiece(text: ' ('),
@@ -46,6 +34,16 @@ class CaAddressFormat extends AddressFormat {
           ],
         ],
       };
+
+  @override
+  List<List<AddressFormField>> get formFormat => [
+        [AddressFormField.fullName],
+        [AddressFormField.address1],
+        [AddressFormField.address2],
+        [AddressFormField.city],
+        [AddressFormField.zone],
+        [AddressFormField.postalCode],
+      ];
 
   @override
   Map<String, Map<String, String>> get zoneNames => {

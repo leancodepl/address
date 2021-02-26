@@ -2,9 +2,6 @@ enum DisplayAddressPart {
   fullName,
   fullNameUppercase,
 
-  company,
-  companyUppercase,
-
   city,
   cityUppercase,
 

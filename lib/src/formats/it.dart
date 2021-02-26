@@ -10,18 +10,9 @@ class ItAddressFormat extends AddressFormat {
   @override
   Map<String, List<List<DisplayAddressPiece>>> get displayFormat => {
         'it': [
-          [
-            DisplayAddressPiece(part: DisplayAddressPart.fullName),
-          ],
-          [
-            DisplayAddressPiece(part: DisplayAddressPart.company),
-          ],
-          [
-            DisplayAddressPiece(part: DisplayAddressPart.address2),
-          ],
-          [
-            DisplayAddressPiece(part: DisplayAddressPart.address1),
-          ],
+          [DisplayAddressPiece(part: DisplayAddressPart.fullName)],
+          [DisplayAddressPiece(part: DisplayAddressPart.address2)],
+          [DisplayAddressPiece(part: DisplayAddressPart.address1)],
           [
             DisplayAddressPiece(part: DisplayAddressPart.postalCode),
             DisplayAddressPiece(text: ' '),
@@ -31,6 +22,16 @@ class ItAddressFormat extends AddressFormat {
           ],
         ],
       };
+
+  @override
+  List<List<AddressFormField>> get formFormat => [
+        [AddressFormField.fullName],
+        [AddressFormField.address1],
+        [AddressFormField.address2],
+        [AddressFormField.city],
+        [AddressFormField.zone],
+        [AddressFormField.postalCode],
+      ];
 
   @override
   Map<String, Map<String, String>> get zoneNames => {

@@ -3,11 +3,6 @@ const fullNameLabel = {
   'en': 'Full name',
 };
 
-// Company
-const companyLabel = {
-  'en': 'Company',
-};
-
 // Address 1
 const address1Label = {
   'en': 'Address line 1',

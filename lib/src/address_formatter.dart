@@ -47,10 +47,6 @@ class AddressFormatter {
         return address.fullName;
       case DisplayAddressPart.fullNameUppercase:
         return address.fullName?.toUpperCase();
-      case DisplayAddressPart.company:
-        return address.company;
-      case DisplayAddressPart.companyUppercase:
-        return address.company?.toUpperCase();
       case DisplayAddressPart.city:
         return address.city;
       case DisplayAddressPart.cityUppercase:

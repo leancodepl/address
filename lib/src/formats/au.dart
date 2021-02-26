@@ -10,15 +10,9 @@ class AuAddressFormat extends AddressFormat {
   @override
   Map<String, List<List<DisplayAddressPiece>>> get displayFormat => {
         'en': [
-          [
-            DisplayAddressPiece(part: DisplayAddressPart.fullName),
-          ],
-          [
-            DisplayAddressPiece(part: DisplayAddressPart.company),
-          ],
-          [
-            DisplayAddressPiece(part: DisplayAddressPart.address1),
-          ],
+          [DisplayAddressPiece(part: DisplayAddressPart.fullName)],
+          [DisplayAddressPiece(part: DisplayAddressPart.address1)],
+          [DisplayAddressPiece(part: DisplayAddressPart.address2)],
           [
             DisplayAddressPiece(part: DisplayAddressPart.cityUppercase),
             DisplayAddressPiece(text: ' '),
@@ -28,6 +22,16 @@ class AuAddressFormat extends AddressFormat {
           ],
         ],
       };
+
+  @override
+  List<List<AddressFormField>> get formFormat => [
+        [AddressFormField.fullName],
+        [AddressFormField.address1],
+        [AddressFormField.address2],
+        [AddressFormField.postalCode],
+        [AddressFormField.city],
+        [AddressFormField.zone],
+      ];
 
   @override
   Map<String, Map<String, String>> get zoneNames => {
@@ -43,8 +47,8 @@ class AuAddressFormat extends AddressFormat {
 
   @override
   Map<AddressFormField, Map<String, String>> get customFieldLabels => {
-        AddressFormField.city: {'en': 'Locality'},
-        AddressFormField.zone: stateLabel,
+        AddressFormField.city: {'en': 'Suburb'},
+        AddressFormField.zone: {'en': 'State/Territory'},
         AddressFormField.postalCode: postcodeLabel,
       };
 }
