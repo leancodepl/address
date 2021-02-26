@@ -11,7 +11,7 @@ void main() {
       country: 'pl',
     );
 
-    final addressFormatter = AddressFormatter();
+    const addressFormatter = AddressFormatter();
     final displayFormatted = addressFormatter.formatDisplay(address);
 
     expect(displayFormatted, [
@@ -32,7 +32,7 @@ void main() {
     );
 
     test('to display in English', () {
-      final addressFormatter = AddressFormatter('en');
+      const addressFormatter = AddressFormatter();
       final displayFormatted = addressFormatter.formatDisplay(address);
 
       expect(displayFormatted, [
@@ -43,7 +43,7 @@ void main() {
     });
 
     test('to display in French', () {
-      final addressFormatter = AddressFormatter('fr');
+      const addressFormatter = AddressFormatter('fr');
       final displayFormatted = addressFormatter.formatDisplay(address);
 
       expect(displayFormatted, [
@@ -64,7 +64,7 @@ void main() {
       country: 'es',
     );
 
-    final addressFormatter = AddressFormatter();
+    const addressFormatter = AddressFormatter();
     final displayFormatted = addressFormatter.formatDisplay(address);
 
     expect(displayFormatted, [

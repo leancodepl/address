@@ -76,7 +76,7 @@ class ItAddressFormat extends AddressFormat {
         'IM': {'it': 'Imperia'},
         'IS': {'it': 'Isernia'},
         'SP': {'it': 'La Spezia'},
-        'AQ': {'it': 'L\'Aquila'},
+        'AQ': {'it': "L'Aquila"},
         'LT': {'it': 'Latina'},
         'LE': {'it': 'Lecce'},
         'LC': {'it': 'Lecco'},
