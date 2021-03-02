@@ -99,14 +99,14 @@ void main() {
                 .having((i) => i.availableValues, 'availableValues', isNull),
             isA<AddressFormFieldInformation>()
                 .having((i) => i.language, 'language', 'pl')
-                .having((i) => i.type, 'type', AddressFormField.address1)
+                .having((i) => i.type, 'type', AddressFormField.addressLine1)
                 .having((i) => i.label, 'label', '1 linia adresu')
                 .having((i) => i.description, 'description', isNull)
                 .having((i) => i.obligatory, 'obligatory', isTrue)
                 .having((i) => i.availableValues, 'availableValues', isNull),
             isA<AddressFormFieldInformation>()
                 .having((i) => i.language, 'language', 'pl')
-                .having((i) => i.type, 'type', AddressFormField.address2)
+                .having((i) => i.type, 'type', AddressFormField.addressLine2)
                 .having((i) => i.label, 'label', '2 linia adresu')
                 .having((i) => i.description, 'description', isNull)
                 .having((i) => i.obligatory, 'obligatory', isFalse)
@@ -144,12 +144,12 @@ void main() {
                 .having((i) => i.description, 'description', isNull),
             isA<AddressFormFieldInformation>()
                 .having((i) => i.language, 'language', 'en')
-                .having((i) => i.type, 'type', AddressFormField.address1)
+                .having((i) => i.type, 'type', AddressFormField.addressLine1)
                 .having((i) => i.label, 'label', 'Address line 1')
                 .having((i) => i.description, 'description', isNull),
             isA<AddressFormFieldInformation>()
                 .having((i) => i.language, 'language', 'en')
-                .having((i) => i.type, 'type', AddressFormField.address2)
+                .having((i) => i.type, 'type', AddressFormField.addressLine2)
                 .having((i) => i.label, 'label', 'Address line 2')
                 .having((i) => i.description, 'description', isNull),
             isA<AddressFormFieldInformation>()
@@ -184,7 +184,7 @@ void main() {
               .having((i) => i.availableValues, 'availableValues', isNull),
           isA<AddressFormFieldInformation>()
               .having((i) => i.language, 'language', 'en')
-              .having((i) => i.type, 'type', AddressFormField.address1)
+              .having((i) => i.type, 'type', AddressFormField.addressLine1)
               .having((i) => i.label, 'label', 'Address line 1')
               .having(
                 (i) => i.description,
@@ -195,7 +195,7 @@ void main() {
               .having((i) => i.availableValues, 'availableValues', isNull),
           isA<AddressFormFieldInformation>()
               .having((i) => i.language, 'language', 'en')
-              .having((i) => i.type, 'type', AddressFormField.address2)
+              .having((i) => i.type, 'type', AddressFormField.addressLine2)
               .having((i) => i.label, 'label', 'Address line 2')
               .having(
                 (i) => i.description,

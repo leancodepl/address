@@ -27,7 +27,7 @@ abstract class AddressFormat {
   /// Form fields that are obligatory in form.
   List<AddressFormField> get obligatoryFormFields => [
         AddressFormField.fullName,
-        AddressFormField.address1,
+        AddressFormField.addressLine1,
         AddressFormField.city,
         if (isZoneObligatory) AddressFormField.zone,
         if (isPostalCodeObligatory) AddressFormField.postalCode,
@@ -41,8 +41,8 @@ abstract class AddressFormat {
 
   static const _defaultFieldLabels = {
     AddressFormField.fullName: fullNameAndOrCompanyLabel,
-    AddressFormField.address1: address1Label,
-    AddressFormField.address2: address2Label,
+    AddressFormField.addressLine1: address1Label,
+    AddressFormField.addressLine2: address2Label,
     AddressFormField.city: cityLabel,
     AddressFormField.zone: regionLabel,
     AddressFormField.postalCode: postalCodeLabel,

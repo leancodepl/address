@@ -26,8 +26,8 @@ class ItAddressFormat extends AddressFormat {
   @override
   List<AddressFormField> get formFormat => [
         AddressFormField.fullName,
-        AddressFormField.address1,
-        AddressFormField.address2,
+        AddressFormField.addressLine1,
+        AddressFormField.addressLine2,
         AddressFormField.city,
         AddressFormField.zone,
         AddressFormField.postalCode,
@@ -154,7 +154,7 @@ class ItAddressFormat extends AddressFormat {
 
   @override
   Map<AddressFormField, Map<String, String>> get fieldDescriptions => {
-        AddressFormField.address1: streetAddressPoBoxCoDescription,
-        AddressFormField.address2: apartmentSuiteEtcDescription,
+        AddressFormField.addressLine1: streetAddressPoBoxCoDescription,
+        AddressFormField.addressLine2: apartmentSuiteEtcDescription,
       };
 }

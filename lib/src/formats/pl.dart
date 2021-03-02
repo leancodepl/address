@@ -23,8 +23,8 @@ class PlAddressFormat extends AddressFormat {
   @override
   List<AddressFormField> get formFormat => [
         AddressFormField.fullName,
-        AddressFormField.address1,
-        AddressFormField.address2,
+        AddressFormField.addressLine1,
+        AddressFormField.addressLine2,
         AddressFormField.postalCode,
         AddressFormField.city,
       ];

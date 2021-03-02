@@ -3,8 +3,8 @@ enum AddressFormField {
   city,
   postalCode,
   zone,
-  address1,
-  address2,
+  addressLine1,
+  addressLine2,
 }
 
 /// Localized description of an address form field.

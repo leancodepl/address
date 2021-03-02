@@ -58,7 +58,8 @@ class AddressFormatter {
           descriptions?[_language] ?? descriptions?[descriptions.keys.first];
 
       Map<String, String>? availableValues;
-      if (field == AddressFormField.zone) {
+      if (field == AddressFormField.zone &&
+          addressFormat.zoneNames.isNotEmpty) {
         availableValues = addressFormat.zoneNames.map((zoneCode, names) {
           final zoneName = names[_language] ?? names[names.keys.first]!;
 

@@ -7,7 +7,6 @@ class Address {
     this.zone,
     this.addressLine1,
     this.addressLine2,
-    this.phone,
   });
 
   /// Country. ISO 3166-1 alpha-2.
@@ -30,7 +29,4 @@ class Address {
 
   /// Second line of the address.
   final String? addressLine2;
-
-  /// Phone number.
-  final String? phone;
 }
