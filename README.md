@@ -67,9 +67,10 @@ final formFormat = addressFormatter.formatForm('US');
 // ]
 ```
 
-You can use this information to build e.g. a Flutter form.
+You can use this information to build e.g. a Flutter form. You can see how to do this by looking into the [example][example].
 
 [pub-link]: https://pub.dev/packages/address
 [pub-badge]: https://img.shields.io/pub/v/address
 [build-link]: https://github.com/leancodepl/address/actions/workflows/test.yml
 [build-badge]: https://img.shields.io/github/workflow/status/leancodepl/address/Test
+[example]: example
