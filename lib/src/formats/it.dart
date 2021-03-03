@@ -22,6 +22,9 @@ class ItAddressFormat extends AddressFormat {
   String get country => 'IT';
 
   @override
+  Map<String, String> get countryName => countryItaly;
+
+  @override
   Map<String, List<List<DisplayAddressPiece>>> get displayFormat => {
         'it': [
           [DisplayAddressPiece(part: DisplayAddressPart.fullName)],

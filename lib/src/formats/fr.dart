@@ -22,6 +22,9 @@ class FrAddressFormat extends AddressFormat {
   String get country => 'FR';
 
   @override
+  Map<String, String> get countryName => countryFrance;
+
+  @override
   Map<String, List<List<DisplayAddressPiece>>> get displayFormat => {
         'fr': [
           [DisplayAddressPiece(part: DisplayAddressPart.fullName)],

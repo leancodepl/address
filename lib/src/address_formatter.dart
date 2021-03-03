@@ -30,7 +30,7 @@ class AddressFormatter {
 
   /// Format [Address] to the correct format for its country for display
   /// purposes.
-  List<String> formatDisplay(Address address) {
+  List<String> formatDisplay(Address address, {bool includeCountry = true}) {
     final addressFormat = _getAddressFormat(address.country);
 
     final displayFormat = addressFormat.displayFormat[_language] ??
@@ -50,6 +50,18 @@ class AddressFormatter {
 
       if (lineBuffer.isNotEmpty) {
         lines.add(lineBuffer.toString());
+      }
+    }
+
+    if (includeCountry) {
+      final countryNames = addressFormat.countryName;
+      final countryName =
+          countryNames[_language] ?? countryNames[countryNames.keys.first]!;
+
+      if (addressFormat.displayCountryUppercase) {
+        lines.add(countryName.toUpperCase());
+      } else {
+        lines.add(countryName);
       }
     }
 

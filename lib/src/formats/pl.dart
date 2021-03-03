@@ -13,12 +13,16 @@
 // limitations under the License.
 
 import '../address_format.dart';
+import '../common_labels.dart';
 import '../display.dart';
 import '../form.dart';
 
 class PlAddressFormat extends AddressFormat {
   @override
   String get country => 'PL';
+
+  @override
+  Map<String, String> get countryName => countryPoland;
 
   @override
   Map<String, List<List<DisplayAddressPiece>>> get displayFormat => {

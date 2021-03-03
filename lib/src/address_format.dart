@@ -22,11 +22,19 @@ abstract class AddressFormat {
   /// ISO 3166-1 alpha-2 code.
   String get country;
 
+  /// Dictionary of a language to country name.
+  ///
+  /// First language in the map is used as a fallback (usually English).
+  Map<String, String> get countryName;
+
   /// Dictionary of a language to 2D list of address pieces describing how
   /// the address should be represented in text.
   ///
   /// First language in the map is used as a fallback.
   Map<String, List<List<DisplayAddressPiece>>> get displayFormat;
+
+  /// Whether the country should be uppercased when included.
+  bool get displayCountryUppercase => false;
 
   /// List of address parts describing how the form for a given country's
   /// address should be layed out.

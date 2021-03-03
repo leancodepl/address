@@ -76,3 +76,44 @@ const zipCodeLabel = {
 const postcodeLabel = {
   'en': 'Postcode',
 };
+
+// Country names
+const countryAustralia = {
+  'en': 'Australia',
+  'pl': 'Australia',
+};
+
+const countryCanada = {
+  'en': 'Canada',
+  'pl': 'Kanada',
+};
+
+const countrySpain = {
+  'en': 'Spain',
+  'pl': 'Hiszpania',
+};
+
+const countryFrance = {
+  'en': 'France',
+  'pl': 'Francja',
+};
+
+const countryItaly = {
+  'en': 'Italy',
+  'pl': 'Włochy',
+};
+
+const countryPoland = {
+  'en': 'Poland',
+  'pl': 'Polska',
+};
+
+const countryUnknown = {
+  'en': 'Unknown',
+  'pl': 'Nieznany',
+};
+
+const countryUnitedStates = {
+  'en': 'United States',
+  'pl': 'Stany Zjednoczone',
+};

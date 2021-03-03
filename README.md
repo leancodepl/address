@@ -3,7 +3,7 @@
 [![Pub Version][pub-badge]][pub-link]
 [![GitHub test workflow status][build-badge]][build-link]
 
-Addresses internationalization library.
+Addresses internationalization library. Format various physical addresses in various languages and build localized address forms.
 
 ## Usage
 
@@ -31,7 +31,8 @@ print(englishFormatter.formatDisplay(address));
 // [
 //   'NICOLE MARTIN',
 //   '123 SHERBROOKE ST',
-//   'MONTREAL QC  H3G 2A6'
+//   'MONTREAL QC  H3G 2A6',
+//   'CANADA'
 // ]
 
 final frenchFormatter = AddressFormatter('fr');
@@ -40,7 +41,8 @@ print(frenchFormatter.formatDisplay(address));
 // [
 //   'Nicole Martin',
 //   '123 Sherbrooke St',
-//   'Montreal (Québec)  H2G 2A6'
+//   'Montreal (Québec)  H2G 2A6',
+//   'CANADA'
 // ]
 ```
 

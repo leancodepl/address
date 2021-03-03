@@ -22,6 +22,9 @@ class UsAddressFormat extends AddressFormat {
   String get country => 'US';
 
   @override
+  Map<String, String> get countryName => countryUnitedStates;
+
+  @override
   Map<String, List<List<DisplayAddressPiece>>> get displayFormat => {
         'en': [
           [DisplayAddressPiece(part: DisplayAddressPart.fullName)],
@@ -36,6 +39,9 @@ class UsAddressFormat extends AddressFormat {
           ],
         ],
       };
+
+  @override
+  bool get displayCountryUppercase => true;
 
   @override
   List<AddressFormField> get formFormat => [

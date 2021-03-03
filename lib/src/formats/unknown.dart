@@ -22,6 +22,9 @@ class UnknownAddressFormat extends AddressFormat {
   String get country => 'XX';
 
   @override
+  Map<String, String> get countryName => countryUnknown;
+
+  @override
   Map<String, List<List<DisplayAddressPiece>>> get displayFormat => {
         'en': [
           [DisplayAddressPiece(part: DisplayAddressPart.fullName)],

@@ -20,6 +20,7 @@ void main() {
         'Grzegorz Brzęczyszczykiewicz',
         'al. Jerozolimskie 13A/2',
         '00-111 Warszawa',
+        'Poland',
       ]);
     });
 
@@ -41,6 +42,7 @@ void main() {
           'NICOLE MARTIN',
           '123 SHERBROOKE ST',
           'MONTREAL QC  H3G 2A6',
+          'CANADA',
         ]);
       });
 
@@ -52,6 +54,7 @@ void main() {
           'Nicole Martin',
           '123 Sherbrooke St',
           'Montreal (Québec)  H3G 2A6',
+          'CANADA',
         ]);
       });
     });
@@ -74,6 +77,7 @@ void main() {
         'Paseo de la Castellana, 185, 5ºB',
         '29001 Madrid',
         'Madrid',
+        'SPAIN',
       ]);
     });
   });
