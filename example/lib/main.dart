@@ -165,6 +165,17 @@ class _MainScreenState extends State<MainScreen> {
   @override
   void dispose() {
     _countryController.dispose();
+    _formLangController.dispose();
+
+    _nameController.dispose();
+    _addressLine1Controller.dispose();
+    _addressLine2Controller.dispose();
+    _cityController.dispose();
+    _zoneController.dispose();
+    _postalCodeController.dispose();
+
+    _displayLangController.dispose();
+
     super.dispose();
   }
 }
