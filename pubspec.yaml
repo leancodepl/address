@@ -1,6 +1,9 @@
 name: address
-description: Addresses internationalization library.
 version: 0.1.0
+description: >-
+  Addresses internationalization library. Format various physical addresses
+  in various languages and build localized address forms.
+repository: https://github.com/leancodepl/address
 
 environment:
   sdk: ">=2.12.0-0 <3.0.0"
