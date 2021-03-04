@@ -42,7 +42,7 @@ class AddressFormatter {
 
       for (final part in line) {
         if (part.text != null) {
-          lineBuffer.write(part.text!);
+          lineBuffer.write(part.text);
         } else {
           lineBuffer.write(_mapAddressPart(address, part.part!) ?? '');
         }
