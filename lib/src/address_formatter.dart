@@ -31,7 +31,7 @@ class AddressFormatter {
   /// Format [Address] to the correct format for its country for display
   /// purposes.
   List<String> formatDisplay(Address address, {bool includeCountry = true}) {
-    final addressFormat = _getAddressFormat(address.country);
+    final addressFormat = getAddressFormat(address.country);
 
     final displayFormat = addressFormat.displayFormat[_language] ??
         addressFormat.displayFormat[addressFormat.displayFormat.keys.first]!;
@@ -74,7 +74,7 @@ class AddressFormatter {
   List<AddressFormFieldInformation> formatForm(String country) {
     final fields = <AddressFormFieldInformation>[];
 
-    final addressFormat = _getAddressFormat(country);
+    final addressFormat = getAddressFormat(country);
     for (final field in addressFormat.formFormat) {
       final labels = addressFormat.fieldLabels[field]!;
       final label = labels[_language] ?? labels[labels.keys.first]!;
@@ -106,7 +106,7 @@ class AddressFormatter {
     return fields;
   }
 
-  AddressFormat _getAddressFormat(String country) =>
+  static AddressFormat getAddressFormat(String country) =>
       addressFormats[country] ?? _defaultAddressFormat;
 
   String? _mapAddressPart(Address address, DisplayAddressPart part) {
@@ -139,7 +139,7 @@ class AddressFormatter {
   }
 
   String? _fullZoneName(Address address) {
-    final addressFormat = _getAddressFormat(address.country);
+    final addressFormat = getAddressFormat(address.country);
     final names = addressFormat.zoneNames[address.zone];
     if (names == null) {
       return address.zone;
