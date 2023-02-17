@@ -93,14 +93,16 @@ class AddressFormatter {
         });
       }
 
-      fields.add(AddressFormFieldInformation(
-        _language,
-        field,
-        label: label,
-        description: description,
-        obligatory: addressFormat.obligatoryFormFields.contains(field),
-        availableValues: availableValues,
-      ));
+      fields.add(
+        AddressFormFieldInformation(
+          _language,
+          field,
+          label: label,
+          description: description,
+          obligatory: addressFormat.obligatoryFormFields.contains(field),
+          availableValues: availableValues,
+        ),
+      );
     }
 
     return fields;

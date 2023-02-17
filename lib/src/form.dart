@@ -48,7 +48,7 @@ class AddressFormFieldInformation {
   /// Whether this field must not be left empty to produce a valid address.
   final bool obligatory;
 
-  /// If the field can contain only a closed set of values, [availableValuess]
+  /// If the field can contain only a closed set of values, [availableValues]
   /// is this set.
   ///
   /// See also:
