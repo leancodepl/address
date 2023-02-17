@@ -12,12 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import 'package:address/src/address.dart';
+import 'package:address/src/address_format.dart';
+import 'package:address/src/display.dart';
 import 'package:address/src/form.dart';
 import 'package:address/src/formats.dart';
-
-import 'address.dart';
-import 'address_format.dart';
-import 'display.dart';
 
 class AddressFormatter {
   /// `_language` is an ISO 639-1 language code.
@@ -93,14 +92,16 @@ class AddressFormatter {
         });
       }
 
-      fields.add(AddressFormFieldInformation(
-        _language,
-        field,
-        label: label,
-        description: description,
-        obligatory: addressFormat.obligatoryFormFields.contains(field),
-        availableValues: availableValues,
-      ));
+      fields.add(
+        AddressFormFieldInformation(
+          _language,
+          field,
+          label: label,
+          description: description,
+          obligatory: addressFormat.obligatoryFormFields.contains(field),
+          availableValues: availableValues,
+        ),
+      );
     }
 
     return fields;

@@ -12,14 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'formats/au.dart';
-import 'formats/ca.dart';
-import 'formats/es.dart';
-import 'formats/fr.dart';
-import 'formats/it.dart';
-import 'formats/pl.dart';
-import 'formats/unknown.dart';
-import 'formats/us.dart';
+import 'package:address/src/formats/au.dart';
+import 'package:address/src/formats/ca.dart';
+import 'package:address/src/formats/es.dart';
+import 'package:address/src/formats/fr.dart';
+import 'package:address/src/formats/it.dart';
+import 'package:address/src/formats/pl.dart';
+import 'package:address/src/formats/unknown.dart';
+import 'package:address/src/formats/us.dart';
 
 final addressFormats = {
   'AU': AuAddressFormat(),
