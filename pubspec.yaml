@@ -1,5 +1,5 @@
 name: address
-version: 0.1.0+1
+version: 0.1.0+2
 description: >-
   Addresses internationalization library. Format various physical addresses
   in various languages and build localized address forms.
