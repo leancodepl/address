@@ -1,3 +1,7 @@
+# 0.1.0+1
+
+- Fix build badge in README.
+
 # 0.1.0
 
 - Initial release.
