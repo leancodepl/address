@@ -1,5 +1,4 @@
 import 'package:address/address.dart';
-import 'package:address/src/form.dart';
 import 'package:test/test.dart';
 
 void main() {

@@ -12,11 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import 'package:address/src/common_labels.dart';
+import 'package:address/src/display.dart';
+import 'package:address/src/form.dart';
 import 'package:meta/meta.dart';
-
-import 'common_labels.dart';
-import 'display.dart';
-import 'form.dart';
 
 abstract class AddressFormat {
   /// ISO 3166-1 alpha-2 code.

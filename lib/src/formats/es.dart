@@ -12,11 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import 'package:address/src/address_format.dart';
+import 'package:address/src/common_labels.dart';
+import 'package:address/src/display.dart';
 import 'package:address/src/form.dart';
-
-import '../address_format.dart';
-import '../common_labels.dart';
-import '../display.dart';
 
 class EsAddressFormat extends AddressFormat {
   @override
