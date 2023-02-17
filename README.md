@@ -74,5 +74,5 @@ You can use this information to build e.g. a Flutter form. You can see how to do
 [pub-link]: https://pub.dev/packages/address
 [pub-badge]: https://img.shields.io/pub/v/address
 [build-link]: https://github.com/leancodepl/address/actions/workflows/test.yml
-[build-badge]: https://img.shields.io/github/workflow/status/leancodepl/address/Test
+[build-badge]: https://img.shields.io/github/actions/workflow/status/leancodepl/address/test.yml?branch=main
 [example]: example
