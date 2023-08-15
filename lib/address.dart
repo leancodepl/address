@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-library address;
-
 export 'src/address.dart';
 export 'src/address_formatter.dart';
 export 'src/form.dart';
